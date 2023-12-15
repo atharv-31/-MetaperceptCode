@@ -1,0 +1,18 @@
+#initial JSON data 
+employee_data=[
+    { "frame":"John","Iname":"Doe","id":1},
+    { "frame":"Jane","Iname":"Smith","id":2}
+]
+
+new_employee={"frame":"ABC","Iname":"XYZ","id":3}
+employee_data.append(new_employee)
+
+employee_with_id_1=next((employee for employee in employee_data if employee["1"]==1),None)
+employee_with_id_2=next((employee for employee in employee_data if employee["2"]==2),None)
+if employee_with_2: employee_with_id_2["Iname"]="Williams"
+
+#Delete (Remove employee with id 1)
+employee_to_delete =next((employee for employee in employee_data if employee["1"]==1),None)
+if employee_to_delete:employee_data.remove(employee_to_delete)
+
+print(json.dumps(employee_data,indent=2))
